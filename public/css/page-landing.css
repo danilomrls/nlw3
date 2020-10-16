@@ -9,7 +9,7 @@
 
 #container {
   margin: auto;
-  width: min(90%,112rem);
+  width: min(90%, 112rem);
 }
 
 .location,
@@ -31,8 +31,8 @@ main h1 {
   animation-delay: 150ms;
 }
 
-.visit a:hover{
-    background: #96feff;
+.visit a:hover {
+  background: #96feff;
 }
 
 .visit p {
@@ -52,26 +52,28 @@ main h1 {
   justify-content: center;
   margin: 0 auto;
 
-  transition: background .2s;
+  transition: background 0.2s;
   animation-delay: 250ms;
 }
 
 /* desktop version */
 
-@media(min-width:760px){
+@media (min-width: 760px) {
   #container {
     padding: 5rem 2rem;
     /*shothand background: image repeat position / size */
     background: url(../images/bg.svg) no-repeat 80% / clamp(30rem, 54vw, 56rem);
   }
 
-  header{
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .location, h1, .visit p {
+  .location,
+  h1,
+  .visit p {
     height: initial;
     text-align: initial;
   }
@@ -82,16 +84,16 @@ main h1 {
     line-height: 1.5;
   }
 
-  main h1 {    
+  main h1 {
     font-weight: bold;
-    line-height: .88;
+    line-height: 0.88;
 
     margin: clamp(10%, 9vh, 11%) 0 4rem;
 
     width: min(300px, 80%);
   }
 
-  .visit{
+  .visit {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,8 +105,8 @@ main h1 {
     width: clamp(20rem, 20vw, 30rem);
   }
 
-  .visit a{
-    margin: initial;    
+  .visit a {
+    margin: initial;
   }
-
+  
 }
