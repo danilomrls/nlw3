@@ -57,7 +57,22 @@ function deleteField(event) {
         span.parentNode.children[0].value = ""
         return
     }
-
     //delete the field
     span.parentNode.remove();
+}
+
+//change the button "corfirmar" state
+function toggleSelect (event) {
+    //remove .active class from both buttons
+    document.querySelectorAll('.button-select button')
+    .forEach(function(button){
+    button.classList.remove("active");
+    })
+    //put the .active class
+    const button = event.currentTarget
+    button.classList.add("active")
+    //update my hidden input with the selected value
+    const input = document.querySelector('[name="open_on_weekends"]')    
+    //verify if the button is yes or no
+    input.value = button.dataset.value
 }
