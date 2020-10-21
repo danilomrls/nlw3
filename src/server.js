@@ -1,6 +1,7 @@
 //import dependencies
 const express = require('express');
 const path = require('path');
+const pages = require('./pages.js')
 
 //initianting the express
 const server = express();
@@ -12,10 +13,11 @@ server
 .set('views', path.join(__dirname, "views"))
 .set('view engine', 'hbs')
 
-//create a route
-.get('/', (request, response) => {    
-    return response.render('index')
-})
+//application routes
+.get('/', pages.index)
+.get('/create-orphanage', pages.createOrphanage)
+.get('/orphanage', pages.orphanage)
+.get('/orphanages', pages.orphanages)
 
 //turn on the server
 server.listen(5500)
